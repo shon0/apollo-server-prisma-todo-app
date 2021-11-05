@@ -6,6 +6,8 @@ generates:
       userIndexSignature: true
       contextType: ../context#Context
       enumsAsTypes: true
+      scalars:
+        Date: Date
     plugins:
       - typescript
       - typescript-resolvers
