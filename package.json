@@ -15,13 +15,5 @@
     "fix:backend": "yarn workspace backend fix",
     "clean:backend": "yarn workspace backend clean",
     "codegen:backend": "yarn workspace backend codegen"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "2.2.2",
-    "@graphql-codegen/typescript-resolvers": "2.4.0",
-    "@graphql-codegen/typescript": "2.3.0",
-    "@types/node": "14.11.2",
-    "gts": "3.1.0",
-    "typescript": "4.0.3"
   }
 }
