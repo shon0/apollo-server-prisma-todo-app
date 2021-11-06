@@ -1,36 +1,27 @@
 {
   "name": "apollo-server-prisma-todo-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "license": "Apache-2.0",
-  "keywords": [],
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "backend"
+    ]
+  },
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
-    "build": "tsc -p tsconfig.json",
-    "start": "node dist/index.js",
-    "lint": "gts lint",
-    "clean": "gts clean",
-    "fix": "gts fix",
-    "codegen": "graphql-codegen --config codegen.yml && yarn fix"
+    "dev": "run-p dev:*",
+    "dev:backend": "yarn workspace backend dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "fix:backend": "yarn workspace backend fix",
+    "clean:backend": "yarn workspace backend clean",
+    "codegen:backend": "yarn workspace backend codegen"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.2.2",
-    "@graphql-codegen/typescript": "^2.3.0",
-    "@graphql-codegen/typescript-resolvers": "^2.4.0",
+    "@graphql-codegen/cli": "2.2.2",
+    "@graphql-codegen/typescript-resolvers": "2.4.0",
+    "@graphql-codegen/typescript": "2.3.0",
     "@types/node": "14.11.2",
     "gts": "3.1.0",
-    "ts-node": "10.4.0",
-    "ts-node-dev": "1.1.8",
     "typescript": "4.0.3"
-  },
-  "dependencies": {
-    "@graphql-tools/graphql-file-loader": "7.3.2",
-    "@graphql-tools/load": "7.4.1",
-    "@graphql-tools/schema": "8.3.1",
-    "@prisma/client": "^3.4.0",
-    "apollo-server": "3.4.0",
-    "graphql": "16.0.1",
-    "prisma": "3.4.0"
   }
 }

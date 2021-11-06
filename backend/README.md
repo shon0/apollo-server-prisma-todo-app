@@ -1,0 +1,3 @@
+# backend
+- Apollo Server
+- Prisma
