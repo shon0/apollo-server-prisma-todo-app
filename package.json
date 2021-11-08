@@ -5,15 +5,15 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "backend"
+      "server"
     ]
   },
   "scripts": {
     "dev": "run-p dev:*",
-    "dev:backend": "yarn workspace backend dev",
+    "dev:server": "yarn workspace server dev",
     "dev:frontend": "yarn workspace frontend dev",
-    "fix:backend": "yarn workspace backend fix",
-    "clean:backend": "yarn workspace backend clean",
-    "codegen:backend": "yarn workspace backend codegen"
+    "fix:server": "yarn workspace server fix",
+    "clean:server": "yarn workspace server clean",
+    "codegen:server": "yarn workspace server codegen"
   }
 }
