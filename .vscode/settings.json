@@ -1,0 +1,16 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.packageManager": "yarn", 
+  "eslint.workingDirectories": [
+    { "directory": "./client", "changeProcessCWD": true },
+    { "directory": "./server", "changeProcessCWD": true },
+  ],
+  "files.watcherExclude": {
+    "**/generated/graphql.ts": true
+  },
+}
