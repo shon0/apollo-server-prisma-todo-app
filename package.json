@@ -5,8 +5,9 @@
   "private": true,
   "workspaces": {
     "packages": [
-      "server",
-      "client"
+      "client",
+      "schema",
+      "server"
     ]
   },
   "scripts": {
@@ -17,7 +18,8 @@
     "lint:client": "yarn workspace client lint",
     "tsc:server": "yarn workspace server tsc",
     "tsc:client": "yarn workspace client tsc",
-    "codegen:server": "yarn workspace server codegen"
+    "codegen:server": "yarn workspace server codegen",
+    "codegen:schema": "yarn workspace schema codegen"
   },
   "devDependencies": {
     "eslint": "7.32.0",

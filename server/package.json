@@ -10,7 +10,7 @@
     "fix:eslint": "eslint --fix 'src/**/*.{js,ts}'",
     "fix:prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx}' --loglevel error",
     "lint": "yarn fix:eslint && yarn fix:prettier",
-    "codegen": "graphql-codegen --config codegen.yml && yarn fix"
+    "codegen": "graphql-codegen --config codegen.yml && yarn lint"
   },
   "dependencies": {
     "@graphql-tools/graphql-file-loader": "7.3.2",

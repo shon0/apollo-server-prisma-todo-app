@@ -1,0 +1,63 @@
+input AddTodoInput {
+  description: String
+  title: String!
+}
+
+input CreateUserInput {
+  id: String!
+  name: String!
+}
+
+scalar Date
+
+input DeleteTodoInput {
+  id: ID!
+}
+
+type Mutation {
+  addTodo(input: AddTodoInput): Todo
+  createUser(input: CreateUserInput): User
+  deleteTodo(input: DeleteTodoInput): Todo
+  updateTodo(input: UpdateTodoInput): Todo
+  updateUser(input: UpdateUserInput): User
+}
+
+type Query {
+  getTodoById(id: Int!): Todo
+  getTodos: [Todo]!
+  user(id: ID!): User
+}
+
+type Todo {
+  createdAt: Date
+  description: String
+  id: Int
+  status: TodoStatus!
+  title: String
+  updatedAt: Date
+  user: User
+  userId: String
+}
+
+enum TodoStatus {
+  done
+  pending
+}
+
+input UpdateTodoInput {
+  description: String
+  id: Int!
+  status: TodoStatus
+  title: String!
+}
+
+input UpdateUserInput {
+  id: String!
+  name: String!
+}
+
+type User {
+  id: String
+  name: String
+  todos: [Todo]
+}

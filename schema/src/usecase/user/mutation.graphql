@@ -1,0 +1,13 @@
+input CreateUserInput {
+  id: String!
+  name: String!
+}
+input UpdateUserInput {
+  id: String!
+  name: String!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput): User
+  updateUser(input: UpdateUserInput): User
+}

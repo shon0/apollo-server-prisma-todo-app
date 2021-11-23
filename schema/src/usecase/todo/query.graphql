@@ -1,0 +1,4 @@
+type Query {
+  getTodos: [Todo]!
+  getTodoById(id: Int!): Todo
+}

@@ -1,0 +1,15 @@
+enum TodoStatus {
+  done
+  pending
+}
+
+type Todo {
+  id: Int
+  createdAt: Date
+  updatedAt: Date
+  title: String
+  description: String
+  status: TodoStatus!
+  user: User
+  userId: String
+}
